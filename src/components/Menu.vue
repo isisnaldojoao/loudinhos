@@ -18,7 +18,7 @@ const toggleOpen = () => {
 <template>
   <nav class="bg-zinc-900 text-gray-100 py-3.5 px-6 shadow md:flex justify-between items-center relative sticky ">
     <div>
-      <img :src="logoImage" class="logo cursor-pointer animate-bounce" alt="Logo"/>
+      <img :src="logoImage" class="logo cursor-pointer" alt="Logo"/>
     </div>
 
     <button class="toggleButon absolute md:hidden right-6 top-1.5 text-4xl focus:outline-none" @click="toggleOpen" aria-expanded="open.toString()">
