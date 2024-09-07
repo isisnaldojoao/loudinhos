@@ -33,8 +33,9 @@ const toggleOpen = () => {
         <RouterLink to="/modalidades" class="text-xl font-semibold hover:text-green-400">MODALIDADES</RouterLink>
       </li>
       <li class="md:mx-4 md:my-0 my-6">
-        <RouterLink to="/redes-sociais" class="text-xl font-semibold hover:text-green-400">REDES SOCIAIS</RouterLink>
+        <a href="https://rainbet.com/pt?r=loudinhos" class="text-xl font-semibold hover:text-green-400">RAINBET</a>
       </li>
+
       <li class="md:mx-4 md:my-0 my-6">
       </li>
     </ul>
