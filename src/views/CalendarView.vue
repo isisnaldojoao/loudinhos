@@ -49,7 +49,7 @@ onMounted(() => {
     <main class="md:flex flex-col min-h-screen">
       <div class="md:flex justify-center tabs-container w-full">
         <div class="flex-col w-full max-w-4xl">
-          <h1 class="text-green-400 my-5 text-2xl">Calendario das modalidades em que a <strong>LOUD</strong>estará presente:</h1>
+          <h1 class="text-green-400 my-5 text-2xl">Calendário das modalidades em que a <strong>LOUD</strong> estará presente:</h1>
           <div class="tabs flex gap-5 mb-6">
             <button 
               v-for="(tab, index) in tabs" 
