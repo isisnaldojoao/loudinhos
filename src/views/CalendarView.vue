@@ -16,22 +16,20 @@ const tabs = ref([
   { 
     title: 'League of Legends', 
     cards: [
-        { header: 'VCT Americas', team1: 'LOUD',team2: 'PAIN',day: '30/11/2024', hours: '14-00' },
-        { header: 'VCT Americas', team1: 'LOUD',team2: 'PAIN',day: '30/11/2024', hours: '14-00' },
+        { header: 'LTA Sul', team1: 'LOUD LEAGUE OF LEGENDS',team2: '',day: 'Março a Junho', hours: '1 etapa' },
+        { header: 'LTA Sul', team1: 'LOUD LEAGUE OF LEGENDS',team2: '',day: 'Julho a Setembro', hours: '2 etapa' },
+        { header: 'LTA Sul', team1: 'LOUD LEAGUE OF LEGENDS',team2: '',day: 'Outubro', hours: 'Torneio de Promoção da Primeira Divisão' },
     ]
   },
   { 
     title: 'VALORANT', 
     cards: [
-    { header: 'VCT Americas', team1: 'LOUD',team2: 'PAIN',day: '30/11/2024', hours: '14-00' },
-    ]
-  },
-  { 
-    title: 'FREE FIRE', 
-    cards: [
-        { header: 'VCT Americas', team1: 'LOUD',team2: 'PAIN',day: '30/11/2024', hours: '14-00' },
-        { header: 'VCT Americas', team1: 'LOUD',team2: 'PAIN',day: '30/11/2024', hours: '14-00' },
-        { header: 'VCT Americas', team1: 'LOUD',team2: 'PAIN',day: '30/11/2024', hours: '14-00' },
+        { header: 'VCT', team1: 'LOUD VALORANT',team2: '',day: '16/01/2025', hours: 'Kickoff Americas' },
+        { header: 'VCT ', team1: 'LOUD VALORANT',team2: '',day: '20/02/2025 à 02/03/2025', hours: 'Masters Bangkok' },
+        { header: 'VCT ', team1: 'LOUD VALORANT',team2: '',day: '22/03/2025 à 16/05/2025', hours: 'VCT Stage 1' },
+        { header: 'VCT ', team1: 'LOUD VALORANT',team2: '',day: '07/06/2025 à 22/06/2025', hours: 'Masters Toronto' },
+        { header: 'VCT ', team1: 'LOUD VALORANT',team2: '',day: '16/07/2025 à 29/08/2025', hours: 'Stage 2' },
+        { header: 'VCT ', team1: 'LOUD VALORANT',team2: '',day: '12/09/2025 à 05/10/2025', hours: 'Champions Paris' },
     ]
   },
 ]);
@@ -51,7 +49,7 @@ onMounted(() => {
     <main class="md:flex flex-col min-h-screen">
       <div class="md:flex justify-center tabs-container w-full">
         <div class="flex-col w-full max-w-4xl">
-          <h1 class="text-green-400 my-5 text-2xl">Próximas partidas da <strong>LOUD</strong> em todas as modalidades</h1>
+          <h1 class="text-green-400 my-5 text-2xl">Calendario das modalidades em que a <strong>LOUD</strong>estará presente:</h1>
           <div class="tabs flex gap-5 mb-6">
             <button 
               v-for="(tab, index) in tabs" 

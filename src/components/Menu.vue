@@ -32,9 +32,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <nav data-aos="fade-down"
-      data-aos-easing="linear"
-      data-aos-duration="1500"
+  <nav 
       class="bg-zinc-900 text-gray-100 py-3.5 px-6 shadow sticky top-0">
     <div class="max-w-6xl mx-auto flex flex-col items-center relative">
 
@@ -45,13 +43,22 @@ onMounted(() => {
 
       <div class="w-full flex justify-center">
         <ul class="hidden md:flex md:items-center">
-          <li class="mx-4">
+          <li data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1300"
+          class="mx-4">
             <RouterLink to="/" class="flex items-center gap-2 text-xl font-semibold hover:text-green-400">INICIO <House/></RouterLink>
           </li>
-          <li class="mx-4">
+          <li data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1600"
+              class="mx-4">
             <RouterLink to="/modalidades" class="flex items-center gap-2 text-xl font-semibold hover:text-green-400">MODALIDADES <Swords/></RouterLink>
           </li>
-          <li class="mx-4">
+          <li data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1900"
+              class="mx-4">
             <RouterLink to="/agenda" class="flex items-center gap-2 text-xl font-semibold hover:text-green-400">AGENDA <CalendarFold /></RouterLink>
           </li>
         </ul>
