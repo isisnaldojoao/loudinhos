@@ -4,7 +4,10 @@ import logoImage from '@/assets/logo.png';
 import Button from './Button.vue';
 import { RouterLink } from 'vue-router';
 import x from '../assets/x.svg'
-import list from '../assets/list.svg'
+import list from '../assets/list.svg';
+import { House } from 'lucide-vue-next';
+import { Swords } from 'lucide-vue-next';
+import { CalendarFold } from 'lucide-vue-next';
 
 const open = ref(false);
 const btn = ref(false)
@@ -26,16 +29,16 @@ const toggleOpen = () => {
     </button>
 
     <ul class="md:flex md:items-center md:px-0 px-3 md:pb-0 pb-10 md:static absolute bg-zinc-900 w-full top-14 md:top-auto duration-500 ease-in-out mt-2" :class="[open ? 'left-0' : 'left-[-100%]']">
-      <li class="md:mx-4 md:my-0 my-6">
-        <RouterLink to="/" class="text-xl font-semibold hover:text-green-400">INICIO</RouterLink>
+      <li class="md: mx-4 md:my-0 my-6">
+        <RouterLink to="/" class="flex justify-center items-center gap-2 text-xl font-semibold hover:text-green-400">INICIO <House/></RouterLink>
       </li>
       <li class="md:mx-4 md:my-0 my-6">
-        <RouterLink to="/modalidades" class="text-xl font-semibold hover:text-green-400">MODALIDADES</RouterLink>
-      </li>
-      <li class="md:mx-4 md:my-0 my-6">
-        <a href="https://rainbet.com/pt?r=loudinhos" class="text-xl font-semibold hover:text-green-400">RAINBET</a>
+        <RouterLink to="/modalidades" class="flex justify-center items-center gap-2 text-xl font-semibold hover:text-green-400">MODALIDADES <Swords/></RouterLink>
       </li>
 
+      <li class="md:mx-4 md:my-0 my-6">
+        <RouterLink to="/modalidades" class="flex justify-center items-center gap-2 text-xl font-semibold hover:text-green-400">CALENDÁRIO <CalendarFold /></RouterLink>
+      </li>
       <li class="md:mx-4 md:my-0 my-6">
       </li>
     </ul>

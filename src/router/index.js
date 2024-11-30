@@ -34,14 +34,6 @@ const router = createRouter({
       component: () => import('../views/LolView.vue')
     },
     {
-      path: '/eafc',
-      name: 'eafc',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/EaView.vue')
-    },
-    {
       path: '/ffemu',
       name: 'ffemu',
       // route level code-splitting
@@ -64,22 +56,6 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/FortniteView.vue')
-    },
-    {
-      path: '/lolacademy',
-      name: 'lolacademy',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/LolAcadView.vue')
-    },
-    {
-      path: '/rocketleague',
-      name: 'rocketleague',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/RlView.vue')
     },
     {
       path: '/valorantinclusivo',

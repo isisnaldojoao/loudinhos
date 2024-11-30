@@ -109,37 +109,46 @@ const todayGames = games.filter(game => game.date === getTodayDate());
     <section class="flex flex-col justify-center items-center mt-2">
       <h1 class="bg-zinc-900 md:max-w-5xl w-full p-4 rounded-lg text-white font-semibold">REDES SOCIAIS</h1>
       <div class="grid grid-cols-1 sm:grid-cols-2 mt-4 gap-1 w-[1030px] px-2">
-        <div
-          class="flex flex-col mt-3 justify-center items-center bg-green-600 w-full md:w-[500px] h-[100px] rounded-lg duration-200 cursor-pointer hover:scale-110"
-        >
-          <img :src="instagram" class="w-10 mb-2" />
-          <div class="bg-white h-0.5 w-full"></div>
-          <p class="mt-2 text-white text-center">INSTAGRAM LOUDINHOS</p>
-        </div>
+        
+        <a href="https://www.instagram.com/loudinhos/" target="_blank" rel="noopener noreferrer">
+          <div
+            class="flex flex-col mt-3 justify-center items-center bg-green-600 w-full md:w-[500px] h-[100px] rounded-lg duration-200 cursor-pointer hover:scale-110"
+          >
+            <img :src="instagram" class="w-10 mb-2" />
+            <div class="bg-white h-0.5 w-full"></div>
+            <p class="mt-2 text-white text-center">INSTAGRAM LOUDINHOS</p>
+          </div>
+        </a>
 
-        <div
-          class="flex flex-col mt-3 justify-center items-center bg-green-600 w-full md:w-[500px] h-[100px] rounded-lg duration-200 cursor-pointer hover:scale-110"
-        >
-          <img :src="twitterx" class="w-10 mb-2" />
-          <div class="bg-white h-0.5 w-full"></div>
-          <p class="mt-2 text-white text-center">TWITTER LOUDINHOS</p>
-        </div>
+        <a href="https://x.com/loudinhos" target="_blank" rel="noopener noreferrer">
+          <div
+            class="flex flex-col mt-3 justify-center items-center bg-green-600 w-full md:w-[500px] h-[100px] rounded-lg duration-200 cursor-pointer hover:scale-110"
+          >
+            <img :src="twitterx" class="w-10 mb-2" />
+            <div class="bg-white h-0.5 w-full"></div>
+            <p class="mt-2 text-white text-center">TWITTER LOUDINHOS</p>
+          </div>
+        </a>
 
-        <div
-          class="flex flex-col mt-3 justify-center items-center bg-green-600 w-full md:w-[500px] h-[100px] rounded-lg duration-200 cursor-pointer hover:scale-110"
-        >
-          <img :src="youtube" class="w-10 mb-2" />
-          <div class="bg-white h-0.5 w-full"></div>
-          <p class="mt-2 text-white text-center">YOUTUBE LOUDINHOS</p>
-        </div>
+        <a href="https://www.youtube.com/@LOUDgg" target="_blank" rel="noopener noreferrer">
+          <div
+            class="flex flex-col mt-3 justify-center items-center bg-green-600 w-full md:w-[500px] h-[100px] rounded-lg duration-200 cursor-pointer hover:scale-110"
+          >
+            <img :src="youtube" class="w-10 mb-2" />
+            <div class="bg-white h-0.5 w-full"></div>
+            <p class="mt-2 text-white text-center">YOUTUBE LOUDINHOS</p>
+          </div>
+        </a>
 
-        <div
-          class="flex flex-col mt-3 justify-center items-center bg-green-600 w-full md:w-[500px] h-[100px] rounded-lg duration-200 cursor-pointer hover:scale-110"
-        >
-          <img :src="tiktok" class="w-10 mb-2" />
-          <div class="bg-white h-0.5 w-full"></div>
-          <p class="mt-2 text-white text-center">TIKTOK LOUDINHOS</p>
-        </div>
+        <a href="https://www.tiktok.com/@loudinhosofc" target="_blank" rel="noopener noreferrer">
+          <div
+            class="flex flex-col mt-3 justify-center items-center bg-green-600 w-full md:w-[500px] h-[100px] rounded-lg duration-200 cursor-pointer hover:scale-110"
+          >
+            <img :src="tiktok" class="w-10 mb-2" />
+            <div class="bg-white h-0.5 w-full"></div>
+            <p class="mt-2 text-white text-center">TIKTOK LOUDINHOS</p>
+          </div>
+        </a>
       </div>
     </section>
 
