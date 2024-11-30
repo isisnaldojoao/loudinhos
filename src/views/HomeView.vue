@@ -6,6 +6,10 @@ import twitterx from '@/assets/twitter-x.svg';
 import youtube from '@/assets/youtube.svg';
 import twich from '@/assets/twich.svg';
 
+import { onMounted } from 'vue';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const games = [
   { id: 1, name: "LOUD x PAIN", date: "07/08", time: "13:30", game: "League of Legends" },
   { id: 2, name: "LOUD x FURIA", date: "07/08", time: "16:00", game: "Valorant" },
@@ -50,20 +54,32 @@ const getTodayDate = () => {
 
 const todayGames = games.filter(game => game.date === getTodayDate());
 
+onMounted(() => {
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true,
+    offset: 50,
+  });
+});
+
 </script>
 
 <template>
   <main class="md:flex flex-col">
     <section class="md:flex justify-center items-center mt-2">
-      <div class="my-15 md:my-0">
-        <img :src="loudinhosNews" class="rounded-lg mr-3" />
+      <div data-aos="fade-right"
+          data-aos-delay="300" 
+          data-aos-duration="1200" 
+          data-aos-easing="ease-in-out"
+          class="my-15 md:my-0">
+        <img :src="loudinhosNews" class="rounded-lg mr-3 shadow-lg shadow-green-500/100" />
       </div>
 
       <div>
         <div class="bg-green-600 md:h-[600px] p-5 rounded-lg">
           <h3 class="text-gray-50 font-bold">JOGOS DE HOJE</h3>
 
-          <!-- Exibe os jogos de hoje, se houver -->
           <div v-if="todayGames.length > 0">
             <div
               v-for="game in todayGames"

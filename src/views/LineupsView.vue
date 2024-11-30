@@ -1,5 +1,9 @@
 <script>
-import { useRouter } from 'vue-router'
+import { useRouter } from 'vue-router';
+
+import { onMounted } from 'vue';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default {
   setup() {
@@ -15,6 +19,18 @@ export default {
     }
   }
 }
+
+onMounted(() => {
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true,
+    offset: 50,
+  });
+});
+
+
+
 </script>
 
 
@@ -27,27 +43,45 @@ export default {
     </div>
     <section class="flex justify-center w-full">
         <div class=" sm:grid grid-cols-2 gap-2 ">
-            <div class="bg-zinc-900 rounded-lg w-[500px] mt-5 cursor-pointer hover:border hover:border-green-600" @click="goToRoute('/fortnite')">
+            <div data-aos="flip-down" 
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+            class="bg-zinc-900 rounded-lg w-[500px] mt-5 cursor-pointer hover:border hover:border-green-600" @click="goToRoute('/fortnite')">
                 <p class="p-5 text-center text-white font-bold">FORTNITE</p>
             </div>
 
-            <div class="bg-zinc-900 rounded-lg w-[500px] mt-5 cursor-pointer hover:border hover:border-green-600" @click="goToRoute('/ff')">
+            <div data-aos="flip-down" 
+                data-aos-easing="linear"
+                data-aos-duration="1000" 
+                class="bg-zinc-900 rounded-lg w-[500px] mt-5 cursor-pointer hover:border hover:border-green-600" @click="goToRoute('/ff')">
                 <p class="p-5 text-center text-white font-bold">FREE FIRE MOBILE</p>
             </div>
 
-            <div class="bg-zinc-900 rounded-lg w-[500px] mt-5 cursor-pointer hover:border hover:border-green-600" @click="goToRoute('/ffemu')">
+            <div data-aos="flip-down" 
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+                 class="bg-zinc-900 rounded-lg w-[500px] mt-5 cursor-pointer hover:border hover:border-green-600" @click="goToRoute('/ffemu')">
                 <p class="p-5 text-center text-white font-bold">FREE FIRE EMULADOR</p>
             </div>
 
-            <div class="bg-zinc-900 rounded-lg w-[500px] mt-5 cursor-pointer hover:border hover:border-green-600" @click="goToRoute('/lol')">
+            <div data-aos="flip-down" 
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+                class="bg-zinc-900 rounded-lg w-[500px] mt-5 cursor-pointer hover:border hover:border-green-600" @click="goToRoute('/lol')">
                 <p class="p-5 text-center text-white font-bold">LEAGUE OF LEGENDS</p>
             </div>
 
-            <div class="bg-zinc-900 rounded-lg w-[500px] mt-5 cursor-pointer hover:border hover:border-green-600" @click="goToRoute('/valorant')">
+            <div data-aos="flip-down" 
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+                class="bg-zinc-900 rounded-lg w-[500px] mt-5 cursor-pointer hover:border hover:border-green-600" @click="goToRoute('/valorant')">
                 <p class="p-5 text-center text-white font-bold">VALORANT </p>
             </div>
             
-            <div class="bg-zinc-900 rounded-lg w-[500px] mt-5 cursor-pointer hover:border hover:border-green-600" @click="goToRoute('/valorantinclusivo')">
+            <div data-aos="flip-down" 
+                data-aos-easing="linear"
+                data-aos-duration="1000"
+                class="bg-zinc-900 rounded-lg w-[500px] mt-5 cursor-pointer hover:border hover:border-green-600" @click="goToRoute('/valorantinclusivo')">
                 <p class="p-5 text-center text-white font-bold">VALORANT INCLUSIVO</p>
             </div>
         </div>

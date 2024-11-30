@@ -1,13 +1,16 @@
 <script setup>
 import { ref } from 'vue';
 import logoImage from '@/assets/logo.png';
-import Button from './Button.vue';
 import { RouterLink } from 'vue-router';
 import x from '../assets/x.svg'
 import list from '../assets/list.svg';
 import { House } from 'lucide-vue-next';
 import { Swords } from 'lucide-vue-next';
 import { CalendarFold } from 'lucide-vue-next';
+
+import { onMounted } from 'vue';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const open = ref(false);
 const btn = ref(false)
@@ -16,45 +19,82 @@ const toggleOpen = () => {
   open.value = !open.value;
   btn.value = !btn.value;
 };
+
+onMounted(() => {
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true,
+    offset: 50,
+  });
+});
+
 </script>
 
 <template>
-  <nav class="bg-zinc-900 text-gray-100 py-3.5 px-6 shadow md:flex justify-between items-center relative sticky ">
-    <div>
-      <img :src="logoImage" class="logo cursor-pointer" alt="Logo"/>
+  <nav data-aos="fade-down"
+      data-aos-easing="linear"
+      data-aos-duration="1500"
+      class="bg-zinc-900 text-gray-100 py-3.5 px-6 shadow sticky top-0">
+    <div class="max-w-6xl mx-auto flex flex-col items-center relative">
+
+      <div class="mb-4 ">
+        <img :src="logoImage" class="logo cursor-pointer " alt="Logo"/>
+      </div>
+
+
+      <div class="w-full flex justify-center">
+        <ul class="hidden md:flex md:items-center">
+          <li class="mx-4">
+            <RouterLink to="/" class="flex items-center gap-2 text-xl font-semibold hover:text-green-400">INICIO <House/></RouterLink>
+          </li>
+          <li class="mx-4">
+            <RouterLink to="/modalidades" class="flex items-center gap-2 text-xl font-semibold hover:text-green-400">MODALIDADES <Swords/></RouterLink>
+          </li>
+          <li class="mx-4">
+            <RouterLink to="/agenda" class="flex items-center gap-2 text-xl font-semibold hover:text-green-400">AGENDA <CalendarFold /></RouterLink>
+          </li>
+        </ul>
+      </div>
+
+      <button class="toggleButon absolute md:hidden right-6 top-1.5 text-4xl focus:outline-none" @click="toggleOpen" aria-expanded="open.toString()">
+        <img :src="[open ? x : list ]"/>
+      </button>
+
+
+      <div class="md:hidden w-full" v-show="open">
+        <ul class="flex flex-col items-center py-4">
+          <li class="my-2">
+            <RouterLink to="/" class="flex items-center gap-2 text-xl font-semibold hover:text-green-400">INICIO <House/></RouterLink>
+          </li>
+          <li class="my-2">
+            <RouterLink to="/modalidades" class="flex items-center gap-2 text-xl font-semibold hover:text-green-400">MODALIDADES <Swords/></RouterLink>
+          </li>
+          <li class="my-2">
+            <RouterLink to="/agenda" class="flex items-center gap-2 text-xl font-semibold hover:text-green-400">AGENDA <CalendarFold /></RouterLink>
+          </li>
+        </ul>
+      </div>
     </div>
-
-    <button class="toggleButon absolute md:hidden right-6 top-1.5 text-4xl focus:outline-none" @click="toggleOpen" aria-expanded="open.toString()">
-      <img :src="[open ? x : list ]"/>
-    </button>
-
-    <ul class="md:flex md:items-center md:px-0 px-3 md:pb-0 pb-10 md:static absolute bg-zinc-900 w-full top-14 md:top-auto duration-500 ease-in-out mt-2" :class="[open ? 'left-0' : 'left-[-100%]']">
-      <li class="md: mx-4 md:my-0 my-6">
-        <RouterLink to="/" class="flex justify-center items-center gap-2 text-xl font-semibold hover:text-green-400">INICIO <House/></RouterLink>
-      </li>
-      <li class="md:mx-4 md:my-0 my-6">
-        <RouterLink to="/modalidades" class="flex justify-center items-center gap-2 text-xl font-semibold hover:text-green-400">MODALIDADES <Swords/></RouterLink>
-      </li>
-
-      <li class="md:mx-4 md:my-0 my-6">
-        <RouterLink to="/modalidades" class="flex justify-center items-center gap-2 text-xl font-semibold hover:text-green-400">CALENDÁRIO <CalendarFold /></RouterLink>
-      </li>
-      <li class="md:mx-4 md:my-0 my-6">
-      </li>
-    </ul>
   </nav>
 </template>
 
 <style scoped>
 .logo {
+  width: 200px;
+}
+
+.toggleButon img {
   width: 40px;
-  animation: bounce 2s infinite;
+  fill: white;
 }
 
-.toggleButon img{
-    width: 40px;
-    fill: white;
-    
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
-
 </style>
